@@ -31,6 +31,7 @@
     "gulp-wrap": "^0.11.0",
     "karma": "^0.12.31",
     "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.1.7",
     "karma-mocha": "^0.1.10",
     "karma-sinon": "^1.0.4",
     "karma-sinon-chai": "^0.3.0",
