@@ -6,10 +6,11 @@
 */
 
 ( function() {
-"use strict";
-jQuery.multipicker = {};
+ "use strict";
+ jQuery.multipicker = {};
 
 jQuery.fn.multipicker = function( options ) {
   console.log( options );
 };
+
 })();

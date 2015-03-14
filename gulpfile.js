@@ -1,20 +1,11 @@
 var wrapTemplate,
-    gulp =   require( "gulp" ),
-    wrap =   require( "gulp-wrap" ),
+    fs     = require( "fs" ),
+    gulp   = require( "gulp" ),
+    wrap   = require( "gulp-wrap" ),
     concat = require( "gulp-concat" ),
-    pkg =    require( "./package.json" );
+    pkg    = require( "./package.json" );
 
-wrapTemplate = "/*!\n" +
-               " * <%= data.name %> v<%= data.version %>\n" +
-               " *\n" +
-               " * Copyright (c) <%= data.author %>, <%= data.homepage %>\n" +
-               " * Released under the <%= data.license %> License\n" +
-               "*/\n" +
-               "\n" +
-               "( function() {\n" +
-                 '"use strict";\n' +
-                 "<%= data.contents %>" +
-               "})();";
+wrapTemplate = fs.readFileSync( "./res/wrap.tmpl", "utf8" );
 
 gulp.task( "js", function() {
   return gulp
