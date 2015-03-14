@@ -40,6 +40,6 @@ jQuery.multipicker.date.options = {
       }
     });
 
-    return jQuery( zeroFill, fields );
+    return jQuery.extend( zeroFill, fields );
   }
 }

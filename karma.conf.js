@@ -15,6 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      "http://code.jquery.com/jquery-1.7.2.min.js",
       "src/javascript/core.js",
       "src/javascript/*.js",
       "karma/javascript/*_spec.js"
