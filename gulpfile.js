@@ -4,7 +4,17 @@ var wrapTemplate,
     concat = require( "gulp-concat" ),
     pkg =    require( "./package.json" );
 
-wrapTemplate = "<%= data.content %>";
+wrapTemplate = "/*!\n" +
+               " * <%= data.name %> v<%= data.version %>\n" +
+               " *\n" +
+               " * Copyright (c) <%= data.author %>, <%= data.homepage %>\n" +
+               " * Released under the <%= data.license %> License\n" +
+               "*/\n" +
+               "\n" +
+               "( function() {\n" +
+                 '"use strict";\n' +
+                 "<%= data.contents %>" +
+               "})();";
 
 gulp.task( "js", function() {
   return gulp
